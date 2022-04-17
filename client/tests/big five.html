@@ -1,0 +1,1550 @@
+{% extends "base_test.html" %}
+{% load static %}
+
+
+
+				{% block content %}
+
+				<header>
+					<h2>"Большая пятёрка"</h2>
+				</header>
+				<p>Данный тест состоит из 50 вопросов. Отвечать на них надо <b>максимально честно</b>, иначе вы не получите объективный результат. Опишите себя таким, каким вы являетесь сейчас, а не тем, кем хотели бы стать в будущем.</p>
+				<hr />
+				<form method="post" action="#">
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Я душа компании</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-1" name="test-checkbox">
+				 		<label for="fully-agree-1">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-1" name="test-checkbox">
+				 		<label for="agree-1">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-1" name="test-checkbox">
+				 		<label for="neutral-1">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-1" name="test-checkbox">
+				 		<label for="somewhat-disagree-1">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-1" name="test-checkbox">
+				 		<label for="strongly-disagree-1">Полностью несогласен</label>
+				 	</div>
+
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Мало беспокоюсь о других</h3>
+				 	</div>
+				 				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-2" name="test-checkbox1">
+				 		<label for="fully-agree-2">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-2" name="test-checkbox1">
+				 		<label for="agree-2">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-2" name="test-checkbox1">
+				 		<label for="neutral-2">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-2" name="test-checkbox1">
+				 		<label for="somewhat-disagree-2">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-2" name="test-checkbox1">
+				 		<label for="strongly-disagree-2">Полностью несогласен</label>
+				 	</div>
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Я всегда готов</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-3" name="test-checkbox2">
+				 		<label for="fully-agree-3">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-3" name="test-checkbox2">
+				 		<label for="agree-3">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-3" name="test-checkbox2">
+				 		<label for="neutral-3">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-3" name="test-checkbox2">
+				 		<label for="somewhat-disagree-3">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-3" name="test-checkbox2">
+				 		<label for="strongly-disagree-3">Полностью несогласен</label>
+				 	</div>
+
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Меня легко выбить из колеи</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-4" name="test-checkbox3">
+				 		<label for="fully-agree-4">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-4" name="test-checkbox3">
+				 		<label for="agree-4">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-4" name="test-checkbox3">
+				 		<label for="neutral-4">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-4" name="test-checkbox3">
+				 		<label for="somewhat-disagree-4">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-4" name="test-checkbox3">
+				 		<label for="strongly-disagree-4">Полностью несогласен</label>
+				 	</div>
+
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">У меня богатый словарный запас</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-5" name="test-checkbox4">
+				 		<label for="fully-agree-5">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-5" name="test-checkbox4">
+				 		<label for="agree-5">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-5" name="test-checkbox4">
+				 		<label for="neutral-5">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-5" name="test-checkbox4">
+				 		<label for="somewhat-disagree-5">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-5" name="test-checkbox4">
+				 		<label for="strongly-disagree-5">Полностью несогласен</label>
+				 	</div>
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Я немногословен</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-6" name="test-checkbox5">
+				 		<label for="fully-agree-6">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-6" name="test-checkbox5">
+				 		<label for="agree-6">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-6" name="test-checkbox5">
+				 		<label for="neutral-6">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-6" name="test-checkbox5">
+				 		<label for="somewhat-disagree-6">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-6" name="test-checkbox5">
+				 		<label for="strongly-disagree-6">Полностью несогласен</label>
+				 	</div>
+
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Я интересуюсь другими людьми</h3>
+				 	</div>
+				 				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-7" name="test-checkbox6">
+				 		<label for="fully-agree-7">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-7" name="test-checkbox6">
+				 		<label for="agree-7">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-7" name="test-checkbox6">
+				 		<label for="neutral-7">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-7" name="test-checkbox6">
+				 		<label for="somewhat-disagree-7">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-7" name="test-checkbox6">
+				 		<label for="strongly-disagree-7">Полностью несогласен</label>
+				 	</div>
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Повсюду оставляю свои вещи</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-8" name="test-checkbox7">
+				 		<label for="fully-agree-8">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-8" name="test-checkbox7">
+				 		<label for="agree-8">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-8" name="test-checkbox7">
+				 		<label for="neutral-8">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-8" name="test-checkbox7">
+				 		<label for="somewhat-disagree-8">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-8" name="test-checkbox7">
+				 		<label for="strongly-disagree-8">Полностью несогласен</label>
+				 	</div>
+
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Большую часть времени я расслаблен</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-9" name="test-checkbox8">
+				 		<label for="fully-agree-9">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-9" name="test-checkbox8">
+				 		<label for="agree-9">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-9" name="test-checkbox8">
+				 		<label for="neutral-9">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-9" name="test-checkbox8">
+				 		<label for="somewhat-disagree-9">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-9" name="test-checkbox8">
+				 		<label for="strongly-disagree-9">Полностью несогласен</label>
+				 	</div>
+
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Мне сложно понять абстрактные идеи</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-10" name="test-checkbox9">
+				 		<label for="fully-agree-10">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-10" name="test-checkbox9">
+				 		<label for="agree-10">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-10" name="test-checkbox9">
+				 		<label for="neutral-10">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-10" name="test-checkbox9">
+				 		<label for="somewhat-disagree-10">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-10" name="test-checkbox9">
+				 		<label for="strongly-disagree-10">Полностью несогласен</label>
+				 	</div>
+				 </p>	
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Мне комфортно находиться с людьми</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-11" name="test-checkbox10">
+				 		<label for="fully-agree-11">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-11" name="test-checkbox10">
+				 		<label for="agree-11">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-11" name="test-checkbox10">
+				 		<label for="neutral-11">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-11" name="test-checkbox10">
+				 		<label for="somewhat-disagree-11">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-11" name="test-checkbox10">
+				 		<label for="strongly-disagree-11">Полностью несогласен</label>
+				 	</div>
+
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Бывает, что я оскорбляю других людей</h3>
+				 	</div>
+				 				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-12" name="test-checkbox11">
+				 		<label for="fully-agree-12">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-12" name="test-checkbox11">
+				 		<label for="agree-12">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-12" name="test-checkbox11">
+				 		<label for="neutral-12">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-12" name="test-checkbox11">
+				 		<label for="somewhat-disagree-12">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-12" name="test-checkbox11">
+				 		<label for="strongly-disagree-12">Полностью несогласен</label>
+				 	</div>
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Я обращаю внимание на детали</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-13" name="test-checkbox12">
+				 		<label for="fully-agree-13">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-13" name="test-checkbox12">
+				 		<label for="agree-13">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-13" name="test-checkbox12">
+				 		<label for="neutral-13">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-13" name="test-checkbox12">
+				 		<label for="somewhat-disagree-13">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-13" name="test-checkbox12">
+				 		<label for="strongly-disagree-13">Полностью несогласен</label>
+				 	</div>
+
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Беспокоюсь о всяком</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-14" name="test-checkbox13">
+				 		<label for="fully-agree-14">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-14" name="test-checkbox13">
+				 		<label for="agree-14">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-14" name="test-checkbox13">
+				 		<label for="neutral-14">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-14" name="test-checkbox13">
+				 		<label for="somewhat-disagree-14">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-14" name="test-checkbox13">
+				 		<label for="strongly-disagree-14">Полностью несогласен</label>
+				 	</div>
+
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">У меня богатое воображение</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-15" name="test-checkbox14">
+				 		<label for="fully-agree-15">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-15" name="test-checkbox14">
+				 		<label for="agree-15">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-15" name="test-checkbox14">
+				 		<label for="neutral-15">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-15" name="test-checkbox14">
+				 		<label for="somewhat-disagree-15">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-15" name="test-checkbox14">
+				 		<label for="strongly-disagree-15">Полностью несогласен</label>
+				 	</div>
+				 </p>	
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Держусь в тени</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-16" name="test-checkbox15">
+				 		<label for="fully-agree-16">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-16" name="test-checkbox15">
+				 		<label for="agree-16">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-16" name="test-checkbox15">
+				 		<label for="neutral-16">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-16" name="test-checkbox15">
+				 		<label for="somewhat-disagree-16">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-16" name="test-checkbox15">
+				 		<label for="strongly-disagree-16">Полностью несогласен</label>
+				 	</div>
+
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Сочувствую другим</h3>
+				 	</div>
+				 				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-17" name="test-checkbox16">
+				 		<label for="fully-agree-17">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-17" name="test-checkbox16">
+				 		<label for="agree-17">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-17" name="test-checkbox16">
+				 		<label for="neutral-17">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-17" name="test-checkbox16">
+				 		<label for="somewhat-disagree-17">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-17" name="test-checkbox16">
+				 		<label for="strongly-disagree-17">Полностью несогласен</label>
+				 	</div>
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Устраиваю беспорядок</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-18" name="test-checkbox17">
+				 		<label for="fully-agree-18">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-18" name="test-checkbox17">
+				 		<label for="agree-18">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-18" name="test-checkbox17">
+				 		<label for="neutral-18">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-18" name="test-checkbox17">
+				 		<label for="somewhat-disagree-18">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-18" name="test-checkbox17">
+				 		<label for="strongly-disagree-18">Полностью несогласен</label>
+				 	</div>
+
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Редко чувствую себя грустным</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-19" name="test-checkbox18">
+				 		<label for="fully-agree-19">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-19" name="test-checkbox18">
+				 		<label for="agree-19">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-19" name="test-checkbox18">
+				 		<label for="neutral-19">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-19" name="test-checkbox18">
+				 		<label for="somewhat-disagree-19">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-19" name="test-checkbox18">
+				 		<label for="strongly-disagree-19">Полностью несогласен</label>
+				 	</div>
+
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Меня не интересуют абстрактные идеи</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-20" name="test-checkbox19">
+				 		<label for="fully-agree-20">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-20" name="test-checkbox19">
+				 		<label for="agree-20">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-20" name="test-checkbox19">
+				 		<label for="neutral-20">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-20" name="test-checkbox19">
+				 		<label for="somewhat-disagree-20">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-20" name="test-checkbox19">
+				 		<label for="strongly-disagree-20">Полностью несогласен</label>
+				 	</div>
+				 </p>	
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Я начинаю разговоры</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-21" name="test-checkbox20">
+				 		<label for="fully-agree-21">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-21" name="test-checkbox20">
+				 		<label for="agree-21">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-21" name="test-checkbox20">
+				 		<label for="neutral-21">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-21" name="test-checkbox20">
+				 		<label for="somewhat-disagree-21">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-21" name="test-checkbox20">
+				 		<label for="strongly-disagree-21">Полностью несогласен</label>
+				 	</div>
+
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Меня не интересуют проблемы других</h3>
+				 	</div>
+				 				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-22" name="test-checkbox21">
+				 		<label for="fully-agree-22">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-22" name="test-checkbox21">
+				 		<label for="agree-22">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-22" name="test-checkbox21">
+				 		<label for="neutral-22">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-22" name="test-checkbox21">
+				 		<label for="somewhat-disagree-22">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-22" name="test-checkbox21">
+				 		<label for="strongly-disagree-22">Полностью несогласен</label>
+				 	</div>
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Выполняю обязанности сразу</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-23" name="test-checkbox22">
+				 		<label for="fully-agree-23">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-23" name="test-checkbox22">
+				 		<label for="agree-23">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-23" name="test-checkbox22">
+				 		<label for="neutral-23">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-23" name="test-checkbox22">
+				 		<label for="somewhat-disagree-23">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-23" name="test-checkbox22">
+				 		<label for="strongly-disagree-23">Полностью несогласен</label>
+				 	</div>
+
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Меня легко прервать</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-24" name="test-checkbox23">
+				 		<label for="fully-agree-24">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-24" name="test-checkbox23">
+				 		<label for="agree-24">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-24" name="test-checkbox23">
+				 		<label for="neutral-24">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-24" name="test-checkbox23">
+				 		<label for="somewhat-disagree-24">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-24" name="test-checkbox23">
+				 		<label for="strongly-disagree-24">Полностью несогласен</label>
+				 	</div>
+
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">У меня отличные идеи</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-25" name="test-checkbox24">
+				 		<label for="fully-agree-25">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-25" name="test-checkbox24">
+				 		<label for="agree-25">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-25" name="test-checkbox24">
+				 		<label for="neutral-25">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-25" name="test-checkbox24">
+				 		<label for="somewhat-disagree-25">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-25" name="test-checkbox24">
+				 		<label for="strongly-disagree-25">Полностью несогласен</label>
+				 	</div>
+				 </p>	
+
+				 				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Я немногословен</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-26" name="test-checkbox25">
+				 		<label for="fully-agree-26">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-26" name="test-checkbox25">
+				 		<label for="agree-26">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-26" name="test-checkbox25">
+				 		<label for="neutral-26">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-26" name="test-checkbox25">
+				 		<label for="somewhat-disagree-26">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-26" name="test-checkbox25">
+				 		<label for="strongly-disagree-26">Полностью несогласен</label>
+				 	</div>
+
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">У меня доброе сердце</h3>
+				 	</div>
+				 				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-27" name="test-checkbox26">
+				 		<label for="fully-agree-27">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-27" name="test-checkbox26">
+				 		<label for="agree-27">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-27" name="test-checkbox26">
+				 		<label for="neutral-27">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-27" name="test-checkbox26">
+				 		<label for="somewhat-disagree-27">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-27" name="test-checkbox26">
+				 		<label for="strongly-disagree-27">Полностью несогласен</label>
+				 	</div>
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Часто забываю положить вещи на их место</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-28" name="test-checkbox27">
+				 		<label for="fully-agree-28">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-28" name="test-checkbox27">
+				 		<label for="agree-28">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-28" name="test-checkbox27">
+				 		<label for="neutral-28">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-28" name="test-checkbox27">
+				 		<label for="somewhat-disagree-28">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-28" name="test-checkbox27">
+				 		<label for="strongly-disagree-28">Полностью несогласен</label>
+				 	</div>
+
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Меня легко расстроить</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-29" name="test-checkbox28">
+				 		<label for="fully-agree-29">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-29" name="test-checkbox28">
+				 		<label for="agree-29">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-29" name="test-checkbox28">
+				 		<label for="neutral-29">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-29" name="test-checkbox28">
+				 		<label for="somewhat-disagree-29">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-29" name="test-checkbox28">
+				 		<label for="strongly-disagree-29">Полностью несогласен</label>
+				 	</div>
+
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">У меня плохое воображение</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-30" name="test-checkbox29">
+				 		<label for="fully-agree-30">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-30" name="test-checkbox29">
+				 		<label for="agree-30">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-30" name="test-checkbox29">
+				 		<label for="neutral-30">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-30" name="test-checkbox29">
+				 		<label for="somewhat-disagree-30">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-30" name="test-checkbox29">
+				 		<label for="strongly-disagree-30">Полностью несогласен</label>
+				 	</div>
+				 </p>	
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">На вечеринках и встречах я общаюсь с разными людьми</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-31" name="test-checkbox30">
+				 		<label for="fully-agree-31">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-31" name="test-checkbox30">
+				 		<label for="agree-31">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-31" name="test-checkbox30">
+				 		<label for="neutral-31">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-31" name="test-checkbox30">
+				 		<label for="somewhat-disagree-31">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-31" name="test-checkbox30">
+				 		<label for="strongly-disagree-31">Полностью несогласен</label>
+				 	</div>
+
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Мне не слишком интересны другие люди</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-32" name="test-checkbox31">
+				 		<label for="fully-agree-32">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-32" name="test-checkbox31">
+				 		<label for="agree-32">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-32" name="test-checkbox31">
+				 		<label for="neutral-32">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-32" name="test-checkbox31">
+				 		<label for="somewhat-disagree-32">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-32" name="test-checkbox31">
+				 		<label for="strongly-disagree-32">Полностью несогласен</label>
+				 	</div>
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Люблю порядок</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-33" name="test-checkbox32">
+				 		<label for="fully-agree-33">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-33" name="test-checkbox32">
+				 		<label for="agree-33">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-33" name="test-checkbox32">
+				 		<label for="neutral-33">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-33" name="test-checkbox32">
+				 		<label for="somewhat-disagree-33">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-33" name="test-checkbox32">
+				 		<label for="strongly-disagree-33">Полностью несогласен</label>
+				 	</div>
+
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Часто меняется настроение</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-34" name="test-checkbox33">
+				 		<label for="fully-agree-34">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-34" name="test-checkbox33">
+				 		<label for="agree-34">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-34" name="test-checkbox33">
+				 		<label for="neutral-34">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-34" name="test-checkbox33">
+				 		<label for="somewhat-disagree-34">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-34" name="test-checkbox33">
+				 		<label for="strongly-disagree-34">Полностью несогласен</label>
+				 	</div>
+
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Я всё схватываю на лету</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-35" name="test-checkbox34">
+				 		<label for="fully-agree-35">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-35" name="test-checkbox34">
+				 		<label for="agree-35">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-35" name="test-checkbox34">
+				 		<label for="neutral-35">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-35" name="test-checkbox34">
+				 		<label for="somewhat-disagree-35">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-35" name="test-checkbox34">
+				 		<label for="strongly-disagree-35">Полностью несогласен</label>
+				 	</div>
+				 </p>	
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Не люблю привлекать к себе внимание</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-36" name="test-checkbox35">
+				 		<label for="fully-agree-36">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-36" name="test-checkbox35">
+				 		<label for="agree-36">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-36" name="test-checkbox35">
+				 		<label for="neutral-36">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-36" name="test-checkbox35">
+				 		<label for="somewhat-disagree-36">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-36" name="test-checkbox35">
+				 		<label for="strongly-disagree-36">Полностью несогласен</label>
+				 	</div>
+
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Нахожу время для других</h3>
+				 	</div>
+				 				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-37" name="test-checkbox36">
+				 		<label for="fully-agree-37">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-37" name="test-checkbox36">
+				 		<label for="agree-37">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-37" name="test-checkbox36">
+				 		<label for="neutral-2">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-37" name="test-checkbox36">
+				 		<label for="somewhat-disagree-37">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-37" name="test-checkbox36">
+				 		<label for="strongly-disagree-37">Полностью несогласен</label>
+				 	</div>
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Уклоняюсь от выполнения обязанностей</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-38" name="test-checkbox37">
+				 		<label for="fully-agree-38">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-38" name="test-checkbox37">
+				 		<label for="agree-38">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-38" name="test-checkbox37">
+				 		<label for="neutral-38">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-38" name="test-checkbox37">
+				 		<label for="somewhat-disagree-38">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-38" name="test-checkbox37">
+				 		<label for="strongly-disagree-38">Полностью несогласен</label>
+				 	</div>
+
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Часто меняется настроение</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-39" name="test-checkbox38">
+				 		<label for="fully-agree-39">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-39" name="test-checkbox38">
+				 		<label for="agree-39">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-39" name="test-checkbox38">
+				 		<label for="neutral-39">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-39" name="test-checkbox38">
+				 		<label for="somewhat-disagree-39">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-39" name="test-checkbox38">
+				 		<label for="strongly-disagree-39">Полностью несогласен</label>
+				 	</div>
+
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Употребляю сложные выражения в разговоре</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-40" name="test-checkbox39">
+				 		<label for="fully-agree-40">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-40" name="test-checkbox39">
+				 		<label for="agree-40">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-40" name="test-checkbox39">
+				 		<label for="neutral-40">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-40" name="test-checkbox39">
+				 		<label for="somewhat-disagree-40">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-40" name="test-checkbox39">
+				 		<label for="strongly-disagree-40">Полностью несогласен</label>
+				 	</div>
+				 </p>	
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Не против быть в центре внимания</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-41" name="test-checkbox40">
+				 		<label for="fully-agree-41">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-41" name="test-checkbox40">
+				 		<label for="agree-41">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-41" name="test-checkbox40">
+				 		<label for="neutral-41">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-41" name="test-checkbox40">
+				 		<label for="somewhat-disagree-41">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-41" name="test-checkbox40">
+				 		<label for="strongly-disagree-41">Полностью несогласен</label>
+				 	</div>
+
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Чувствую эмоции других</h3>
+				 	</div>
+				 				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-42" name="test-checkbox41">
+				 		<label for="fully-agree-42">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-42" name="test-checkbox41">
+				 		<label for="agree-42">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-42" name="test-checkbox41">
+				 		<label for="neutral-42">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-42" name="test-checkbox41">
+				 		<label for="somewhat-disagree-42">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-42" name="test-checkbox41">
+				 		<label for="strongly-disagree-42">Полностью несогласен</label>
+				 	</div>
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Следую распорядку дня</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-43" name="test-checkbox42">
+				 		<label for="fully-agree-43">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-43" name="test-checkbox42">
+				 		<label for="agree-43">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-43" name="test-checkbox42">
+				 		<label for="neutral-43">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-43" name="test-checkbox42">
+				 		<label for="somewhat-disagree-43">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-43" name="test-checkbox42">
+				 		<label for="strongly-disagree-43">Полностью несогласен</label>
+				 	</div>
+
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Легко раздражаюсь</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-44" name="test-checkbox43">
+				 		<label for="fully-agree-44">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-44" name="test-checkbox43">
+				 		<label for="agree-44">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-44" name="test-checkbox43">
+				 		<label for="neutral-44">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-44" name="test-checkbox43">
+				 		<label for="somewhat-disagree-44">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-44" name="test-checkbox43">
+				 		<label for="strongly-disagree-44">Полностью несогласен</label>
+				 	</div>
+
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Провожу время в размышлениях</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-45" name="test-checkbox44">
+				 		<label for="fully-agree-45">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-45" name="test-checkbox44">
+				 		<label for="agree-45">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-45" name="test-checkbox44">
+				 		<label for="neutral-45">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-45" name="test-checkbox44">
+				 		<label for="somewhat-disagree-45">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-45" name="test-checkbox44">
+				 		<label for="strongly-disagree-45">Полностью несогласен</label>
+				 	</div>
+				 </p>	
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Я предпочитаю молчать, когда вокруг меня много незнакомых людей</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-46" name="test-checkbox45">
+				 		<label for="fully-agree-46">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-46" name="test-checkbox45">
+				 		<label for="agree-46">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-46" name="test-checkbox45">
+				 		<label for="neutral-46">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-46" name="test-checkbox45">
+				 		<label for="somewhat-disagree-46">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-46" name="test-checkbox45">
+				 		<label for="strongly-disagree-46">Полностью несогласен</label>
+				 	</div>
+
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Делаю так, чтобы другие люди чувствовали себя непринужденно рядом со мной</h3>
+				 	</div>
+				 				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-47" name="test-checkbox46">
+				 		<label for="fully-agree-47">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-47" name="test-checkbox46">
+				 		<label for="agree-47">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-47" name="test-checkbox46">
+				 		<label for="neutral-47">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-47" name="test-checkbox46">
+				 		<label for="somewhat-disagree-47">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-47" name="test-checkbox46">
+				 		<label for="strongly-disagree-47">Полностью несогласен</label>
+				 	</div>
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Требователен в работе</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-48" name="test-checkbox47">
+				 		<label for="fully-agree-48">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-48" name="test-checkbox47">
+				 		<label for="agree-48">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-48" name="test-checkbox47">
+				 		<label for="neutral-48">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-48" name="test-checkbox47">
+				 		<label for="somewhat-disagree-48">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-48" name="test-checkbox47">
+				 		<label for="strongly-disagree-48">Полностью несогласен</label>
+				 	</div>
+
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Часто чувствую грусть</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-49" name="test-checkbox48">
+				 		<label for="fully-agree-49">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-49" name="test-checkbox48">
+				 		<label for="agree-49">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-49" name="test-checkbox48">
+				 		<label for="neutral-49">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-49" name="test-checkbox48">
+				 		<label for="somewhat-disagree-49">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-49" name="test-checkbox48">
+				 		<label for="strongly-disagree-49">Полностью несогласен</label>
+				 	</div>
+
+				 </p>
+
+				 <p>
+				 	<div class="quiz-question-header">
+				 		<h3 class="quiz-question-title">Я полон идей</h3>
+				 	</div>
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="fully-agree-50" name="test-checkbox49">
+				 		<label for="fully-agree-50">Полностью согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="agree-50" name="test-checkbox49">
+				 		<label for="agree-50">Вполне согласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="neutral-50" name="test-checkbox49">
+				 		<label for="neutral-50">Не могу согласиться или не согласиться</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="somewhat-disagree-50" name="test-checkbox49">
+				 		<label for="somewhat-disagree-50">Отчасти несогласен</label>
+				 	</div>
+
+				 	<div class="col-4 col-12-small"> 
+				 		<input type="radio" id="strongly-disagree-50" name="test-checkbox49">
+				 		<label for="strongly-disagree-50">Полностью несогласен</label>
+				 	</div>
+				 </p>	
+
+				 {% include 'additional_questions.html' %}
+				 	
+				 <button type="submit">Получить результат</button>
+				</form>
+
+				{% endblock %}
+
