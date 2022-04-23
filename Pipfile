@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 django = "==4.0.4"
 django-rest-framework-social-oauth2 = "*"
+djangorestframework-simplejwt = "*"
 
 [dev-packages]
 
