@@ -169,7 +169,7 @@ LOGIN_REDIRECT_URL = '/'
 SOCIALACCOUNT_PROVIDERS = {
     
     'vk' : {
-    'SCOPE' : ['profile', 'wall', 'offline'],
+    'SCOPE' : ['profile', 'groups', 'offline'],
     'AUTH_PARAMS' : {
     'access_type' : 'offline',
     }

@@ -8,6 +8,7 @@ from website.socialaccount.providers.oauth2.views import (
 
 from .provider import VKProvider
 
+import vk_api
 
 USER_FIELDS = [
     "first_name",
@@ -40,6 +41,11 @@ class VKOAuth2Adapter(OAuth2Adapter):
     access_token_url = "https://oauth.vk.com/access_token"
     authorize_url = "https://oauth.vk.com/authorize"
     profile_url = "https://api.vk.com/method/users.get"
+    wall_url = "https://api.vk.com/method/wall.get"
+
+    # PAY ATTENTION, THIS VALUES CAN BE CHANGED IN APP SETTINGS
+    service_key = "23fc074823fc074823fc074835238049bf223fc23fc0748419829b938c193a0d50635ac"
+    app_id = 8146679
 
     def complete_login(self, request, app, token, **kwargs):
         uid = kwargs["response"].get("user_id")
@@ -50,10 +56,17 @@ class VKOAuth2Adapter(OAuth2Adapter):
         }
         if uid:
             params["user_ids"] = uid
+
+        vk_session = vk_api.VkApi(app_id = self.app_id, client_secret=self.service_key)
+        vk_session.token = {'access_token': token.token, 'expires_in': 0}
+        vk = vk_session.get_api()
+
+        print(vk.groups.get(owner_id = uid, offset = 0))
+
         resp = requests.get(self.profile_url, params=params)
         resp.raise_for_status()
         extra_data = resp.json()["response"][0]
-        print(extra_data)
+        print(token.token)
         email = kwargs["response"].get("email")
         if email:
             extra_data["email"] = email
