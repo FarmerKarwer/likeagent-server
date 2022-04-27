@@ -1,5 +1,11 @@
 {% load static %}
 
+{% load i18n %}
+
+{% load account socialaccount %}
+
+{% get_providers as socialaccount_providers %}
+
 <!DOCTYPE HTML>
 
 <html>
@@ -23,11 +29,10 @@
 			</header>
 
 		<!-- Signup Form -->
-			<form id="signup-form" method="post" action="#">
+			<form id="signup-form" method="post" action="{% url 'account_login' %}">
 				<input type="submit" value="Войти" />
 			</form>
-			<!-- <a href="{% url "social:begin" "google-oauth2" %}">Google+</a> -->
-
+			
 		<!-- Footer -->
 			<footer id="footer">
 				<ul class="copyright">

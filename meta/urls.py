@@ -26,5 +26,8 @@ urlpatterns = [
     path('tests/big5/', tests_big5),
     path('tests/temper/', tests_temper),
     path('tests/typeofthinking/', tests_typeofthinking),
-    path('auth/', include('rest_framework_social_oauth2.urls')),
+    # path('auth/', include('rest_framework_social_oauth2.urls')),
+    # path('accounts/', include('allauth.urls')),
+    # Getting code for vk api
+    path('accounts/', include('website.urls')),
 ]

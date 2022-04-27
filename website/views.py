@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+
 # Create your views here.
 def home_view(request, *args, **kwargs):
 	return render(request, "index.html", {})
@@ -33,3 +34,7 @@ def tests_typeofthinking(request, *args, **kwargs):
 	"title" : "Тип мышления"
 	}
 	return render(request, "type_of_thinking.html", context)
+
+# Getting social code
+def get_social_code(request):
+	print(request.GET['code'])

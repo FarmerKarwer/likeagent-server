@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "6fdc7103c268a3c7723e4316de69b7b503917aa2dd8970d408a47a383588dfd7"
+            "sha256": "5ef4cd7d92467e50c637b315e9a8a89d17739112d4baa83b567931e2c25d8395"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -144,6 +144,13 @@
             "index": "pypi",
             "version": "==4.0.4"
         },
+        "django-allauth": {
+            "hashes": [
+                "sha256:ee3a174e249771caeb1d037e64b2704dd3c56cfec44f2058fae2214b224d35e8"
+            ],
+            "index": "pypi",
+            "version": "==0.50.0"
+        },
         "django-braces": {
             "hashes": [
                 "sha256:28f00b0f98368c9a37f30cce6087fc57127f0a24c5b8b449f9e1245bded6405d",
@@ -153,10 +160,10 @@
         },
         "django-oauth-toolkit": {
             "hashes": [
-                "sha256:37b690fa53f340c7391bdbc0fdbb32fd9ef8a7c012e72ee8754c331a2d7b4adb",
-                "sha256:756e44421d0993f27705736b6c33a3d89018393859a31ac926296950f76e4433"
+                "sha256:755df741b9e1cce4d9b651453c54a4338b23919cefa55ad40d37c797e508e192",
+                "sha256:eb265de8c1faa6362325e7a677e007a83bb64a65e8732a6278161622fa4e0fad"
             ],
-            "version": "==1.7.1"
+            "version": "==2.0.0"
         },
         "django-rest-framework-social-oauth2": {
             "hashes": [
@@ -212,6 +219,9 @@
             "version": "==2.21"
         },
         "pyjwt": {
+            "extras": [
+                "crypto"
+            ],
             "hashes": [
                 "sha256:b888b4d56f06f6dcd777210c334e69c737be74755d3e5e9ee3fe67dc18a0ee41",
                 "sha256:e0c4bb8d9f0af0c7f5b1ec4c5036309617d03d56932877f2f7a0beeb5318322f"
@@ -288,6 +298,14 @@
             ],
             "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4' and python_version < '4'",
             "version": "==1.26.9"
+        },
+        "vk-api": {
+            "hashes": [
+                "sha256:68f4bf836780669790c1a5b4e1c02523d981f1274bfd17bf648a6997122a579c",
+                "sha256:e88f69f4df4378995a43d00283c8c80a7d4c2f36aecacae1ff1e9fe4562f9e0d"
+            ],
+            "index": "pypi",
+            "version": "==11.9.7"
         },
         "wrapt": {
             "hashes": [
