@@ -1,3 +1,11 @@
+{% load static %}
+
+{% load i18n %}
+
+{% load account socialaccount %}
+
+{% get_providers as socialaccount_providers %}
+
 <!DOCTYPE HTML>
 
 <html>
@@ -5,11 +13,11 @@
 		<title>Вход</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="auth_assets/css/main.css" />
-		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-		<link rel="manifest" href="favicon/site.webmanifest">
+		<link rel="stylesheet" href="{% static 'auth_assets/css/main.css' %}" />
+		<link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
+		<link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+		<link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %)">
+		<link rel="manifest" href="{% static 'favicon/site.webmanifest' %}">
 	</head>
 	<body class="is-preload">
 
@@ -21,8 +29,9 @@
 			</header>
 
 		<!-- Signup Form -->
-			<form id="signup-form" method="post" action="#">
-				<input type="submit" value="Войти" />
+			<form method="post">
+		  {% csrf_token %}
+		  <button type="submit">{% trans "Войти" %}</button>
 			</form>
 
 		<!-- Footer -->
@@ -33,7 +42,6 @@
 			</footer>
 
 		<!-- Scripts -->
-			<script src="auth_assets/js/main.js"></script>
-
+			<script src="{% static 'auth_assets/js/main.js' %}"></script>
 	</body>
 </html>

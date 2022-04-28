@@ -99,7 +99,7 @@ body {
   -webkit-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
-  background-color: #000;
+  background-color: #1A4B78;
   padding: 6em 4em 4em 4em; }
   body.is-preload *, body.is-preload *:before, body.is-preload *:after {
     -moz-animation: none !important;
@@ -733,7 +733,7 @@ button,
   -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
   -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
-  background-color: #1cb495;
+  background-color: #4C75A3;
   border-radius: 6px;
   border: 0;
   color: #ffffff !important;

@@ -37,6 +37,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+
+    # 'oauth2_provider',
+    # 'social_django',
+    # 'rest_framework_social_oauth2',
+
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'website.socialaccount.providers.vk',
 ]
 
 MIDDLEWARE = [
@@ -123,3 +133,48 @@ STATICFILES_DIRS = ['static']
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Authentication keys
+
+# SOCIAL_AUTH_VK_OAUTH2_KEY = '8140766'
+
+# SOCIAL_AUTH_VK_OAUTH2_SECRET = '59mfoHEMy443LGeyLNON'
+
+AUTHENTICATION_BACKENDS = (
+    # 'social_core.backends.vk.VKOAuth2',
+    # 'rest_framework_social_oauth2.backends.DjangoOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+
+
+# SOCIAL_AUTH_VK_APP_USER_MODE = 2
+
+# REST_FRAMEWORK = {
+#     'DEFAULT_AUTHENTICATION_CLASSES': (
+#         'rest_framework.authentication.TokenAuthentication',
+#         'rest_framework_simplejwt.authentication.JWTAuthentication',
+#         'oauth2_provider.contrib.rest_framework.OAuth2Authentication',
+#         'rest_framework_social_oauth2.authentication.SocialAuthentication',
+#     ),
+#     'DEFAULT_FILTER_BACKENDS': (
+#         'django_filters.rest_framework.DjangoFilterBackend',
+#     ),
+# }
+
+SITE_ID = 3
+
+LOGIN_REDIRECT_URL = '/'
+
+ACCOUNT_LOGOUT_REDIRECT_URL ="/accounts/vk/login"
+
+SOCIALACCOUNT_PROVIDERS = {
+    
+    'vk' : {
+    'SCOPE' : ['profile', 'groups', 'offline'],
+    'AUTH_PARAMS' : {
+    'access_type' : 'offline',
+    }
+
+    }
+}
