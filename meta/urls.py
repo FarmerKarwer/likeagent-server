@@ -19,7 +19,6 @@ from website.views import *
 
 urlpatterns = [
     path('', home_view),
-    path('authorize', login_view),
     path('admin/', admin.site.urls),
     path('tests/', tests),
     path('tests/swl/', tests_swl),

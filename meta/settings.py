@@ -166,6 +166,8 @@ SITE_ID = 3
 
 LOGIN_REDIRECT_URL = '/'
 
+ACCOUNT_LOGOUT_REDIRECT_URL ="/accounts/vk/login"
+
 SOCIALACCOUNT_PROVIDERS = {
     
     'vk' : {

@@ -29,10 +29,11 @@
 			</header>
 
 		<!-- Signup Form -->
-			<form id="signup-form" method="post" action="{% url 'account_login' %}">
-				<input type="submit" value="Войти" />
+			<form method="post">
+		  {% csrf_token %}
+		  <button type="submit">{% trans "Войти" %}</button>
 			</form>
-			
+
 		<!-- Footer -->
 			<footer id="footer">
 				<ul class="copyright">
@@ -42,6 +43,5 @@
 
 		<!-- Scripts -->
 			<script src="{% static 'auth_assets/js/main.js' %}"></script>
-
 	</body>
 </html>
