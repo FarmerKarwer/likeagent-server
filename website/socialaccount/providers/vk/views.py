@@ -57,20 +57,24 @@ class VKOAuth2Adapter(OAuth2Adapter):
         if uid:
             params["user_ids"] = uid
 
+        def merge_two_dicts(x, y):
+            z = x.copy()
+            z.update(y)
+            return z
+
         vk_session = vk_api.VkApi(app_id = self.app_id, client_secret=self.service_key)
         vk_session.token = {'access_token': token.token, 'expires_in': 0}
         vk = vk_session.get_api()
-
-        print(vk.groups.get(owner_id = uid, offset = 0))
-
+        group_list = vk.groups.get(user_id = uid, offset = 0)
+ 
         resp = requests.get(self.profile_url, params=params)
         resp.raise_for_status()
         extra_data = resp.json()["response"][0]
-        print(token.token)
         email = kwargs["response"].get("email")
         if email:
             extra_data["email"] = email
-        return self.get_provider().sociallogin_from_response(request, extra_data)
+        user_data = merge_two_dicts(extra_data, group_list)
+        return self.get_provider().sociallogin_from_response(request, user_data)
 
 
 oauth2_login = OAuth2LoginView.adapter_view(VKOAuth2Adapter)
