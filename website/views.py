@@ -3,7 +3,7 @@ from .models import *
 from django.views.generic import ListView
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
-
+from django.http import JsonResponse
 
 # Create your views here.
 @method_decorator(login_required(login_url='/accounts/vk/login/'), name='dispatch')
@@ -45,3 +45,16 @@ def tests_typeofthinking(request, *args, **kwargs):
 def quiz_view(request, pk):
 	quiz = Quiz.objects.get(pk=pk)
 	return render(request, 'tests/base_test.html', {'obj' : quiz})
+
+
+def quiz_data_view(request, pk):
+	quiz = Quiz.objects.get(pk=pk)
+	questions = []
+	for q in quiz.get_questions():
+		answers = []
+		for a in q.get_answers():
+			answers.append(a.text)
+		questions.append({str(q): answers})
+	return JsonResponse({
+		'data' : questions,
+		})

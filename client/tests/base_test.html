@@ -33,7 +33,20 @@
 			<section class="post">
 				{% block content %}
 
-
+				<header>
+					<h2>{{obj.name}}</h2>
+				</header>
+				<p>
+					{{obj.main_description}}
+				</p>
+				<hr>
+				<form method="post" id="quiz-form" action="#">
+					{% csrf_token %}
+					<div id="quiz-box">
+						
+					</div>
+					<button type="submit">Получить результат</button>
+				</form>
 				{% endblock %}
 			</section>
 		</div>
@@ -46,6 +59,7 @@
 			<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
 			<script src="{% static 'assets/js/util.js' %}"></script>
 			<script src="{% static 'assets/js/main.js' %}"></script>
+			<script src="{% static 'assets/js/quiz.js' %}"></script>
 	</div>
 </body>
 </html>
