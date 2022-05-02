@@ -15,18 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.static import static
+from django.conf import settings
 from website.views import *
 
 urlpatterns = [
-    path('', home_view),
+    path('', QuizListView.as_view()),
     path('admin/', admin.site.urls),
     path('tests/', tests),
     path('tests/swl/', tests_swl),
     path('tests/big5/', tests_big5),
     path('tests/temper/', tests_temper),
     path('tests/typeofthinking/', tests_typeofthinking),
-    # path('auth/', include('rest_framework_social_oauth2.urls')),
-    # path('accounts/', include('allauth.urls')),
-    # Getting code for vk api
+    path('tests/<pk>/', quiz_view, name='quiz-view'),
     path('accounts/', include('website.urls')),
 ]
+
+urlpatterns+= static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

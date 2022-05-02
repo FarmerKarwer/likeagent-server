@@ -81,46 +81,21 @@
 						<!-- Posts -->
 							<section class="posts">
 
+								{% for obj in object_list %}
+	
 								<article>
 									<header>
-										<h2><a href="tests/big5/">"Большая пятёрка" - полный портрет личности</a></h2>
+										<h2><a href="tests/{{obj.pk}}/">{{obj.name}}</a></h2>
 									</header>
-									<a href="tests/big5/" class="image fit"><img src="{% static 'images/pic02.jpg' %}" alt="" /></a>
-									<p>Модель "большой пятерки" предполагает, что личность человека включает в себя пять общих и относительно независимых черт: экстраверсию, доброжелательность, добросовестность, нейротизм и открытость опыту.</p>
+									<a href="tests/{{obj.pk}}/" class="image fit"><img src="{{obj.preview_image.url}}" alt="" /></a>
+									<p>{{obj.brief_description}}</p>
 									<ul class="actions special">
-										<li><a href="tests/big5/" class="button">Начать тест</a></li>
+										<li><a href="tests/{{obj.pk}}/" class="button">Начать тест</a></li>
 									</ul>
 								</article>
-								<article>
-									<header>
-										<h2><a href="tests/swl">Тест на удовлетворённость жизнью</a></h2>
-									</header>
-									<a href="tests/swl" class="image fit"><img src="{% static 'images/pic04.jpg' %}" alt="" /></a>
-									<p>«Шкала удовлетворённости жизнью» была создана группой ученых во главе с профессором Динером,  который посвятил более 25 лет изучению счастья. Эта шкала позволяет измерить субъективный уровень счастья.</p>
-									<ul class="actions special">
-										<li><a href="tests/swl" class="button">Начать тест</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="tests/temper/">Тест на темперамент</a></h2>
-									</header>
-									<a href="tests/temper/" class="image fit"><img src="{% static 'images/pic05.jpg' %}" alt="" /></a>
-									<p>Темперамент – это природно-обусловленная склонность человека к определённому стилю поведения. Определите являетесь ли вы холериком, сангвиником, меланхоликом или флегматиком.</p>
-									<ul class="actions special">
-										<li><a href="tests/temper/" class="button">Начать тест</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="tests/typeofthinking/">Какой у вас тип мышления?</a></h2>
-									</header>
-									<a href="tests/typeofthinking/" class="image fit"><img src="{% static 'images/pic07.jpg' %}" alt="" /></a>
-									<p>В разных сферах деятельности для достижения успеха требуются люди с преобладанием какого-то определенного стиля мышления. Этот онлайн тест на тип мышления из 32 вопросов основывается на теоретических положениях Джерома Брунера и с легкостью определит ваш тип. Пройдите его прямо сейчас!</p>
-									<ul class="actions special">
-										<li><a href="tests/typeofthinking/" class="button">Начать тест</a></li>
-									</ul>
-								</article>
+								
+								{% endfor %}
+
 							</section>
 
 						<!-- Footer -->
