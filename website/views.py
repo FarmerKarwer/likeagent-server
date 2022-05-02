@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .models import *
+from django.views.generic import ListView
 from django.contrib.auth.decorators import login_required
 
 @login_required(login_url='/accounts/vk/login/')
