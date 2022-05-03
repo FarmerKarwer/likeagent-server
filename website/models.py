@@ -61,8 +61,11 @@ class Condition(models.Model):
 	result = models.ForeignKey(Result, on_delete=models.CASCADE)
 
 class UserResult(models.Model):
-	user = models.OneToOneField(User, on_delete=models.CASCADE)
+	user = models.ForeignKey(User, on_delete=models.CASCADE)
 	quiz = models.ForeignKey(Quiz, on_delete=models.CASCADE)
 	test_result = models.JSONField(null=True)
 	def __str__(self):
-		return f"{self.user}"
+		return f"{self.user}: {self.quiz}"
+
+	class Meta:
+		unique_together = ('user', 'quiz',)
