@@ -109,6 +109,6 @@ def save_quiz_view(request, pk):
 			result_dict.update({group.group_name:cond_results})
 			user_result_dict.update({group.group_name:cond_results["name"]})
 		
-		UserResult(pk=pk,quiz=quiz, user=user, test_result=user_result_dict).save(update_fields=['quiz', 'test_result'])
+		UserResult(pk=pk,quiz=quiz, user=user, test_result=user_result_dict).save()
 
 	return JsonResponse(result_dict)
