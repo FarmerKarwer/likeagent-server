@@ -23,7 +23,7 @@ $.ajax({
 				answers.forEach(answer=>{
 					quizBox.innerHTML += `
 					<div class="col-4 col-12-small">
-					<input type="radio" class="ans" id="${question}-${answer}" name="${question}" value="${answer}">
+					<input type="radio" class="ans" id="${question}-${answer}" name="${question}" value="${answer}" required="required">
 					<label for="${question}-${answer}">${answer}</label>
 					</div>
 					`
@@ -53,6 +53,7 @@ const sendData = () => {
 			}
 		}
 	})
+
 	$.ajax({
 		type: 'POST',
 		url: `${url}save/`,
@@ -84,8 +85,7 @@ const sendData = () => {
 				`
 
 				}
-				// const body = document.getElementsByTagName('SECTION')[0]
-				// body.append(resDiv)
+
 		resultBox.innerHTML += `<hr>`
 		},
 		error: function(error){
