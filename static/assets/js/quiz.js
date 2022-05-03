@@ -2,6 +2,7 @@ console.log('Hello!!!!!!!')
 const url = window.location.href
 
 const quizBox = document.getElementById('quiz-box')
+const resultBox = document.getElementById('result-box')
 let data
 
 $.ajax({
@@ -36,6 +37,7 @@ $.ajax({
 })
 
 const quizForm = document.getElementById('quiz-form')
+const main_description = document.getElementById('main-description')
 const csrf = document.getElementsByName('csrfmiddlewaretoken')
 
 const sendData = () => {
@@ -57,6 +59,34 @@ const sendData = () => {
 		data: data,
 		success: function(response){
 			console.log(response)
+			const results = Object.entries(response);
+			console.log(results)
+			quizForm.classList.add('not-visible')
+			main_description.classList.add('not-visible')
+			resultBox.innerHTML += `<h2>Результат:</h2>`
+			// Object.entries(response).forEach(res=>{
+			 	const resDiv = document.createElement("div")
+				for (const [question, resp] of results){
+
+					const description = resp['description']
+					const res_name = resp['name']
+					const res_text = resp['text']
+
+					console.log(description)
+					console.log(res_name)
+					console.log(res_text)
+
+				resultBox.innerHTML += `
+				<p>${description}</p>
+				<h4>${res_name}</h4>
+				<p>${res_text}</p>
+				
+				`
+
+				}
+				// const body = document.getElementsByTagName('SECTION')[0]
+				// body.append(resDiv)
+		resultBox.innerHTML += `<hr>`
 		},
 		error: function(error){
 			console.log(error)

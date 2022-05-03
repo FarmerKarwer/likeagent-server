@@ -50,7 +50,7 @@ class Answer(models.Model):
 
 class Result(models.Model):
 	quiz = models.ForeignKey(Quiz, on_delete=models.CASCADE)
-	text = models.TextField(max_length=1500)
+	text = models.TextField(max_length=1500, blank=True, null=True)
 	result_group = models.ForeignKey(ResultGroup, on_delete=models.CASCADE, null=True)		
 
 class Condition(models.Model):
@@ -61,6 +61,8 @@ class Condition(models.Model):
 	result = models.ForeignKey(Result, on_delete=models.CASCADE)
 
 class UserResult(models.Model):
+	user = models.OneToOneField(User, on_delete=models.CASCADE)
 	quiz = models.ForeignKey(Quiz, on_delete=models.CASCADE)
-	user = models.ForeignKey(User, on_delete=models.CASCADE)
 	test_result = models.JSONField(null=True)
+	def __str__(self):
+		return f"{self.user}"
