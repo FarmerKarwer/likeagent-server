@@ -22,6 +22,7 @@ from website.views import *
 urlpatterns = [
     path('', QuizListView.as_view()),
     path('admin/', admin.site.urls),
+    path('privacy_policy/', privacy_policy_view),
     path('tests/', tests),
     path('tests/swl/', tests_swl),
     path('tests/big5/', tests_big5),

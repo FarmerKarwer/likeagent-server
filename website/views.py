@@ -11,6 +11,9 @@ def is_ajax(request):
   return request.headers.get('x-requested-with') == 'XMLHttpRequest'
 
 # Create your views here.
+def privacy_policy_view(request):
+	return render(request, "privacy_policy.html", {})
+
 @method_decorator(login_required(login_url='/accounts/vk/login/'), name='dispatch')
 class QuizListView(ListView):
 	model = Quiz
@@ -64,12 +67,12 @@ def quiz_data_view(request, pk):
 		'data' : questions,
 		})
 
+
 def save_quiz_view(request, pk):
 	if is_ajax(request):
 		questions = []
 		data = request.POST
 		data_ = dict(data.lists())
-		
 		data_.pop('csrfmiddlewaretoken')
 
 		for k in data_.keys():
