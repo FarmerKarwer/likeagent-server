@@ -80,6 +80,9 @@ def save_quiz_view(request, pk):
 		quiz = Quiz.objects.get(pk=pk)
 		result_groups = list(Quiz(pk=pk).get_resultgroups())
 
+		user_result_dict = {}
+		result_dict = {}
+
 		for group in result_groups:
 			group_questions = Question.objects.filter(result_group=group)
 			group_results = Result.objects.filter(result_group=group)
@@ -93,14 +96,15 @@ def save_quiz_view(request, pk):
 					for a in question_answers:
 						if a_selected == a.text:
 							score+=a.score
-			results = []
+
 			for r in group_results:
 				result_conditions = Condition.objects.filter(result=r)
-				cond_results = []
+				cond_results = {}
 				for c in result_conditions:
 					if c.min_score <= score <= c.max_score:
-						cond_results.append({"name":c.name, "text": c.text})
-				results.append({"condition": cond_results, "score": score, "description" : r.text})
-			print(results)
-
-	return JsonResponse({'text': 'works'})
+						cond_results.update({"name":c.name, "score": score, "text": c.text,  "description" : r.text})
+			result_dict.update({group.group_name:cond_results})
+			user_result_dict.update({group.group_name:cond_results["name"]})
+		
+		UserResult.objects.create(quiz=quiz, user=user, test_result=user_result_dict)
+	return JsonResponse(result_dict)

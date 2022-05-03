@@ -62,5 +62,5 @@ class Condition(models.Model):
 
 class UserResult(models.Model):
 	quiz = models.ForeignKey(Quiz, on_delete=models.CASCADE)
-	user = models.ForeignKey(SocialAccount, on_delete=models.CASCADE)
-	test_result = models.ForeignKey(Condition, on_delete=models.CASCADE, null=True)
+	user = models.ForeignKey(User, on_delete=models.CASCADE)
+	test_result = models.JSONField(null=True)
