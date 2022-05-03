@@ -23,11 +23,8 @@ urlpatterns = [
     path('', QuizListView.as_view()),
     path('admin/', admin.site.urls),
     path('privacy_policy/', privacy_policy_view),
-    path('tests/', tests),
-    path('tests/swl/', tests_swl),
-    path('tests/big5/', tests_big5),
-    path('tests/temper/', tests_temper),
-    path('tests/typeofthinking/', tests_typeofthinking),
+    path('tests/', TestListView.as_view()),
+    
     path('tests/<pk>/', quiz_view, name='quiz-view'),
     path('tests/<pk>/save/', save_quiz_view, name='save-view'),
     path('tests/<pk>/data/', quiz_data_view, name='quiz-data-view'),
