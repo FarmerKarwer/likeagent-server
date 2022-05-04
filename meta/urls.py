@@ -28,6 +28,7 @@ urlpatterns = [
     path('tests/<pk>/save/', save_quiz_view, name='save-view'),
     path('tests/<pk>/data/', quiz_data_view, name='quiz-data-view'),
     path('tests/<pk>/additional_data/', additional_data_view, name='additional-data-view'),
+    path('tests/<pk>/save_additional_data/', save_additional_data_view, name='additional-data-save'),
     path('accounts/', include('website.urls')),
 ]
 

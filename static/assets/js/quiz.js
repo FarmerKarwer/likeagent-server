@@ -44,21 +44,18 @@ $.ajax({
 	url: `${url}additional_data/`,
 	success: function(response){
 		data = response.data
-		console.log(data)
 		data.forEach(el => {
-			console.log(el)
 			for (const [question, answers] of Object.entries(el)){
 
 				additionalBox.innerHTML += `
 				<div class="col-12">
-					<select name="${question}" id="${question}">
+					<select class="addque" name="${question}" id="${question}">
 						<option value="${question}" disabled selected>- ${question} -</option>
 				`
-				console.log(additionalBox)
 				q = document.getElementById(question)
 				answers.forEach(answer=>{
 					q.innerHTML += `
-					<option value="${answer}">${answer}</option>
+					<option name="${question}" class="addans" value="${answer}">${answer}</option>
 					`
 				})
 			}
@@ -69,11 +66,48 @@ $.ajax({
 	}
 })
 
-
-
 const quizForm = document.getElementById('quiz-form')
 const main_description = document.getElementById('main-description')
 const csrf = document.getElementsByName('csrfmiddlewaretoken')
+
+
+// Sending additional data
+
+const sendAdditionalData = () => {
+	const elements = [...document.getElementsByClassName('addans')]
+	const head_elements = [...document.getElementsByClassName('addque')]
+	const data = {}
+	data['csrfmiddlewaretoken'] = csrf[0].value
+	head_elements.forEach(hel=>{
+
+		elements.forEach(el=>{
+			console.log(el)
+			console.log(el.value)
+			if (hel.options[hel.selectedIndex].value == el.value){
+				data[hel.name] = el.value
+			} else {
+				if (!data[hel.name]) {
+					data[hel.name] = null
+				}
+			}
+		})
+
+	})
+
+	$.ajax({
+		type: 'POST',
+		url: `${url}save_additional_data/`,
+		data: data,
+		success: function(response){
+			console.log(response)
+		},
+		error: function(error){
+			console.log(error)
+		}
+	})
+
+}
+
 
 const sendData = () => {
 	const elements = [...document.getElementsByClassName('ans')]
@@ -129,4 +163,5 @@ quizForm.addEventListener('submit', e=>{
 	e.preventDefault()
 
 	sendData()
+	sendAdditionalData()
 })

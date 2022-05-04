@@ -55,6 +55,15 @@ def additional_data_view(request, pk):
 		'data' : questions,
 		})
 
+
+def save_additional_data_view(request, pk):
+	if is_ajax(request):
+		data = request.POST
+		data_ = dict(data.lists())
+		data_.pop('csrfmiddlewaretoken')
+		print(data_)
+	return JsonResponse({'text': 'additional_data_view'})
+
 @login_required(login_url='/accounts/vk/login/')
 def save_quiz_view(request, pk):
 	if is_ajax(request):
