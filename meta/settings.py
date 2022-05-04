@@ -39,9 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
 
-    # 'oauth2_provider',
-    # 'social_django',
-    # 'rest_framework_social_oauth2',
+    'website',
 
     'allauth',
     'allauth.account',
@@ -60,6 +58,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'meta.urls'
+
+MEDIA_ROOT = BASE_DIR
+MEDIA_URL = ''
 
 TEMPLATES = [
     {
@@ -166,7 +167,7 @@ SITE_ID = 3
 
 LOGIN_REDIRECT_URL = '/'
 
-ACCOUNT_LOGOUT_REDIRECT_URL ="/accounts/vk/login"
+ACCOUNT_LOGOUT_REDIRECT_URL ="/accounts/vk/login/"
 
 SOCIALACCOUNT_PROVIDERS = {
     

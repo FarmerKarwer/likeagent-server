@@ -33,7 +33,33 @@
 			<section class="post">
 				{% block content %}
 
-
+				<header>
+					<h2>{{obj.name}}</h2>
+				</header>
+				<p id="main-description">
+					{{obj.main_description}}
+				</p>
+				<hr>
+				<form method="post" id="quiz-form" action="#">
+					{% csrf_token %}
+					<div id="quiz-box">
+						
+					</div>
+					
+					<div id="additional-questions">
+						<hr>
+						<p>Следующие вопросы не связаны с тестом и не обязательны. И всё же мы просим ответить на них. Эта информация нам необходима для ведения статистики.</p>
+						<p>
+							<div id="additional-box">
+								
+							</div>
+						</p>
+					</div>
+					<button type="submit">Получить результат</button>
+				</form>
+				<div id="result-box">
+					
+				</div>
 				{% endblock %}
 			</section>
 		</div>
@@ -46,6 +72,7 @@
 			<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
 			<script src="{% static 'assets/js/util.js' %}"></script>
 			<script src="{% static 'assets/js/main.js' %}"></script>
+			<script src="{% static 'assets/js/quiz.js' %}"></script>
 	</div>
 </body>
 </html>
