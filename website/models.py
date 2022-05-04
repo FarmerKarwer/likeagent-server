@@ -69,3 +69,23 @@ class UserResult(models.Model):
 
 	class Meta:
 		unique_together = ('user', 'quiz',)
+
+
+
+class AdditionalQuestion(models.Model):
+	name = models.CharField(max_length=100)
+
+	def __str__(self):
+		return self.name
+
+	def get_answers(self):
+		return self.additionalanswer_set.all()
+
+class AdditionalAnswer(models.Model):
+	name = models.ForeignKey(AdditionalQuestion, on_delete=models.CASCADE)
+	answer = models.CharField(max_length=100)
+
+
+class UserAdditionalResult(models.Model):
+	user = models.ForeignKey(User, on_delete=models.CASCADE)
+	info = models.JSONField(null=True)

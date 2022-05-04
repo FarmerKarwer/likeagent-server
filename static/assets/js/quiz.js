@@ -2,6 +2,7 @@ console.log('Hello!!!!!!!')
 const url = window.location.href
 
 const quizBox = document.getElementById('quiz-box')
+const additionalBox = document.getElementById('additional-box')
 const resultBox = document.getElementById('result-box')
 let data
 
@@ -35,6 +36,40 @@ $.ajax({
 		console.log(error)
 	}
 })
+
+// Getting additional data
+
+$.ajax({
+	type: 'GET',
+	url: `${url}additional_data/`,
+	success: function(response){
+		data = response.data
+		console.log(data)
+		data.forEach(el => {
+			console.log(el)
+			for (const [question, answers] of Object.entries(el)){
+
+				additionalBox.innerHTML += `
+				<div class="col-12">
+					<select name="${question}" id="${question}">
+						<option value="${question}" disabled selected>- ${question} -</option>
+				`
+				console.log(additionalBox)
+				q = document.getElementById(question)
+				answers.forEach(answer=>{
+					q.innerHTML += `
+					<option value="${answer}">${answer}</option>
+					`
+				})
+			}
+		});
+	},
+	error: function(error){
+		console.log(error)
+	}
+})
+
+
 
 const quizForm = document.getElementById('quiz-form')
 const main_description = document.getElementById('main-description')
@@ -72,10 +107,6 @@ const sendData = () => {
 					const description = resp['description']
 					const res_name = resp['name']
 					const res_text = resp['text']
-
-					console.log(description)
-					console.log(res_name)
-					console.log(res_text)
 
 				resultBox.innerHTML += `
 				<p>${description}</p>

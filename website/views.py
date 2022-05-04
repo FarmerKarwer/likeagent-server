@@ -43,6 +43,18 @@ def quiz_data_view(request, pk):
 		'data' : questions,
 		})
 
+def additional_data_view(request, pk):
+	questions_list = AdditionalQuestion.objects.all()
+	questions = []
+	for q in questions_list:
+		answers = []
+		for a in q.get_answers():
+			answers.append(a.answer)
+		questions.append({str(q): answers})
+	return JsonResponse({
+		'data' : questions,
+		})
+
 @login_required(login_url='/accounts/vk/login/')
 def save_quiz_view(request, pk):
 	if is_ajax(request):
