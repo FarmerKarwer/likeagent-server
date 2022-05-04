@@ -1,6 +1,7 @@
 from django.db import models
 from allauth.socialaccount.models import SocialAccount
 from django.contrib.auth.models import User
+from django.db.models import Q
 
 # Create your models here.
 class Quiz(models.Model):
@@ -66,9 +67,6 @@ class UserResult(models.Model):
 	test_result = models.JSONField(null=True)
 	def __str__(self):
 		return f"{self.user}: {self.quiz}"
-
-	class Meta:
-		unique_together = ('user', 'quiz',)
 
 
 
