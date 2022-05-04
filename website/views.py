@@ -43,6 +43,7 @@ def quiz_data_view(request, pk):
 		'data' : questions,
 		})
 
+@login_required(login_url='/accounts/vk/login/')
 def additional_data_view(request, pk):
 	questions_list = AdditionalQuestion.objects.all()
 	questions = []
@@ -55,13 +56,16 @@ def additional_data_view(request, pk):
 		'data' : questions,
 		})
 
-
+@login_required(login_url='/accounts/vk/login/')
 def save_additional_data_view(request, pk):
 	if is_ajax(request):
 		data = request.POST
 		data_ = dict(data.lists())
 		data_.pop('csrfmiddlewaretoken')
-		print(data_)
+		if all(value == [''] for value in data_.values())==False:
+			user = request.user
+			UserAdditionalResult.objects.create(user=user, info=data_)
+
 	return JsonResponse({'text': 'additional_data_view'})
 
 @login_required(login_url='/accounts/vk/login/')

@@ -89,3 +89,6 @@ class AdditionalAnswer(models.Model):
 class UserAdditionalResult(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
 	info = models.JSONField(null=True)
+
+	def __str__(self):
+		return str(self.user)

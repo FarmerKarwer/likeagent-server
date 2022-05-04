@@ -81,8 +81,6 @@ const sendAdditionalData = () => {
 	head_elements.forEach(hel=>{
 
 		elements.forEach(el=>{
-			console.log(el)
-			console.log(el.value)
 			if (hel.options[hel.selectedIndex].value == el.value){
 				data[hel.name] = el.value
 			} else {
@@ -128,9 +126,7 @@ const sendData = () => {
 		url: `${url}save/`,
 		data: data,
 		success: function(response){
-			console.log(response)
 			const results = Object.entries(response);
-			console.log(results)
 			quizForm.classList.add('not-visible')
 			main_description.classList.add('not-visible')
 			resultBox.innerHTML += `<h2>Результат:</h2>`
