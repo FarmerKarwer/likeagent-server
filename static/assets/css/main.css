@@ -26,6 +26,10 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+.not-visible{
+	display: None;
+}
+
 body {
 	line-height: 1;
 }
@@ -3383,7 +3387,7 @@ input, select, textarea {
 				}
 
 		#intro h1 {
-			font-size: 5rem;
+			font-size: 3rem;
 			line-height: 1;
 		}
 
