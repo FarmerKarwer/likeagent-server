@@ -147,7 +147,14 @@ const sendData = () => {
 
 				}
 
-		resultBox.innerHTML += `<hr>`
+		resultBox.innerHTML += `
+		<hr>
+		<ul class="actions special">
+		<li>
+		<a href="../" class="button">Вернуться к тестам</a>
+		</li>
+		</ul>
+		`
 		},
 		error: function(error){
 			console.log(error)

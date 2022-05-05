@@ -788,6 +788,8 @@ button,
 #header a {
   color: inherit; }
 
+
+
 @media screen and (max-width: 736px) {
   #header h1 {
     font-size: 2em; }
@@ -885,3 +887,41 @@ button,
       left: auto;
       margin: 1em 0 0 0;
       position: relative; } }
+
+@media screen and (max-width: 736px) {
+  button {
+    font-size: 0.9rem;
+    height: 3.25rem;
+    line-height: 3.25rem;
+    border: 0;
+    border-radius: 0;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 900;
+    letter-spacing: 0.075em;
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0 7.5rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+  }
+
+  #footer .copyright {
+    font-size: 0.9em;
+    list-style: none;
+    padding: 0;
+  }
+
+  #footer .copyright li {
+    border-left: solid 0px rgba(255, 255, 255, 0.25);
+    display: inline-block;
+    line-height: 2em;
+    margin: 0 0 0 0.0em;
+    padding: 0 0 0 0.0em;
+  }
+}

@@ -11,7 +11,7 @@
 		<link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
 		<link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
 		<link rel="manifest" href="{% static 'favicon/site.webmanifest' %}">
-	<title>{{title}}</title>
+	<title>{{obj.name}}</title>
 </head>
 <body class="is-preload">
 
@@ -34,7 +34,7 @@
 				{% block content %}
 
 				<header>
-					<h2>{{obj.name}}</h2>
+					<h2 id="h2-title">{{obj.name}}</h2>
 				</header>
 				<p id="main-description">
 					{{obj.main_description}}
@@ -55,7 +55,7 @@
 							</div>
 						</p>
 					</div>
-					<button type="submit">Получить результат</button>
+					<button onClick="window.scrollTo(0, 500);" type="submit">Получить результат</button>
 				</form>
 				<div id="result-box">
 					
